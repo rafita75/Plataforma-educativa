@@ -105,7 +105,7 @@ const CourseDetail = () => {
   
   const markAsComplete = async (lessonIndex) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/courses/${courseId}/complete`, {
+      const res = await fetch(`https://edu-platform-backend-sbvg.onrender.com/api/courses/${courseId}/complete`, {
         method: 'PATCH',
         headers: { 
           'Content-Type': 'application/json',

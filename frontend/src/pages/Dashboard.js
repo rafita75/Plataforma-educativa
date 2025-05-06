@@ -12,7 +12,7 @@ function Dashboard() {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/courses');
+        const response = await fetch('https://edu-platform-backend-sbvg.onrender.com/api/courses');
         const data = await response.json();
         setCourses(data);
       } catch (error) {

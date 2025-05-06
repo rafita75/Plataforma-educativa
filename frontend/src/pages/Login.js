@@ -20,11 +20,11 @@ const Login = () => {
 
    const onSubmit = async (values) => {
       try {
-         const response = await axios.post('http://localhost:5000/api/auth/login', values);
+         const response = await axios.post('https://edu-platform-backend-sbvg.onrender.com/api/auth/login', values);
          localStorage.setItem('token', response.data.token);
    
          // Verificar si es el primer inicio de sesión
-         const userResponse = await axios.get('http://localhost:5000/api/auth/user', {
+         const userResponse = await axios.get('https://edu-platform-backend-sbvg.onrender.com/api/auth/user', {
             headers: {
                Authorization: `Bearer ${response.data.token}`,
             },

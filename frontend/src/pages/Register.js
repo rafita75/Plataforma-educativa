@@ -26,7 +26,7 @@ const Register = () => {
 
    const onSubmit = async (values) => {
       try {
-         await axios.post('http://localhost:5000/api/auth/register', values);
+         await axios.post('https://edu-platform-backend-sbvg.onrender.com/api/auth/register', values);
          navigate('/login');
       } catch (err) {
          console.log(err.response.data.error);

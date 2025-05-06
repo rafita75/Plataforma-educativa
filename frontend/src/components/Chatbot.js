@@ -23,7 +23,7 @@ const Chatbot = () => {
       if (!token) throw new Error('No estás autenticado');
   
       const response = await axios.post(
-        'http://localhost:5000/api/chatbot/query',
+        'https://edu-platform-backend-sbvg.onrender.com/api/chatbot/query',
         { message: inputValue },
         {
           headers: {

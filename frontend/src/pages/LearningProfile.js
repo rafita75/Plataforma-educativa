@@ -40,7 +40,7 @@ const LearningProfile = () => {
         return;
       }
 
-      const response = await axios.get('http://localhost:5000/api/auth/learning-profile', {
+      const response = await axios.get('https://edu-platform-backend-sbvg.onrender.com/api/auth/learning-profile', {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -102,7 +102,7 @@ const LearningProfile = () => {
     setIsSaving(true);
     try {
       const response = await axios.put(
-        'http://localhost:5000/api/auth/update-profile',
+        'https://edu-platform-backend-sbvg.onrender.com/api/auth/update-profile',
         {
           name: editForm.name,
           grade: editForm.grade,

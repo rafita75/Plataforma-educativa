@@ -22,7 +22,7 @@ const Questionnaire = () => {
         return;
       }
 
-      const response = await axios.get('http://localhost:5000/api/auth/generate-questions', {
+      const response = await axios.get('https://edu-platform-backend-sbvg.onrender.com/api/auth/generate-questions', {
         headers: { 
           Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json' 
@@ -59,7 +59,7 @@ const Questionnaire = () => {
   const submitQuestionnaire = async () => {
     try {
       const token = localStorage.getItem('token');
-      await axios.post('http://localhost:5000/api/auth/submit-questionnaire', 
+      await axios.post('https://edu-platform-backend-sbvg.onrender.com/api/auth/submit-questionnaire', 
         { answers },
         {
           headers: {

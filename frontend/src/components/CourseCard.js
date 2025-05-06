@@ -21,7 +21,7 @@ const CourseCard = ({ course, onCourseDeleted }) => {
         throw new Error("No hay sesión activa");
       }
 
-      const response = await fetch(`http://localhost:5000/api/courses/${course._id}`, {
+      const response = await fetch(`https://edu-platform-backend-sbvg.onrender.com/api/courses/${course._id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,
