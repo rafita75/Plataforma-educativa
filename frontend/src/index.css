@@ -1,0 +1,46 @@
+.btn-primary:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+ }
+
+ /* Si no usas Tailwind */
+.menu-bar {
+    background-color: #2563eb;
+    color: white;
+    padding: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s;
+  }
+  
+  .menu-item:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .logout-btn:hover {
+    background-color: #dc2626;
+  }
+
+  /* Añade esto al final del archivo */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 60px; /* Igual al ancho de la sidebar */
+  padding: 20px;
+  transition: margin-left 0.3s;
+}
+
+.main-content.expanded {
+  margin-left: 200px;
+}

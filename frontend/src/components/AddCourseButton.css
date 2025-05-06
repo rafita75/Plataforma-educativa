@@ -1,0 +1,102 @@
+/* course-creator.css */
+.course-creator-container {
+  margin: 2rem 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.course-creator-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(108, 99, 255, 0.2);
+}
+
+.course-creator-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(108, 99, 255, 0.3);
+}
+
+.course-creator-toggle.active {
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+}
+
+.toggle-icon {
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.course-creator-toggle.active .toggle-icon {
+  transform: rotate(180deg);
+}
+
+.subject-selector {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.subject-button {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 0.8rem;
+  background-color: var(--card-bg);
+  border: 2px solid rgba(108, 99, 255, 0.1);
+  border-radius: 8px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.subject-button:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(108, 99, 255, 0.1);
+}
+
+.subject-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Modo oscuro */
+.dark-mode .subject-button {
+  background-color: var(--card-bg-dark);
+  border-color: rgba(138, 43, 226, 0.1);
+}
+
+.dark-mode .subject-button:hover {
+  border-color: var(--primary-dark);
+  box-shadow: 0 4px 10px rgba(138, 43, 226, 0.1);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .subject-selector {
+    flex-direction: column;
+  }
+  
+  .subject-button {
+    width: 100%;
+  }
+}

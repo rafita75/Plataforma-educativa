@@ -1,0 +1,43 @@
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    border-radius: 30px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo para light mode */
+  .dark-mode-toggle.light {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--text-primary);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo para dark mode */
+  .dark-mode-toggle.dark {
+    background: rgba(30, 30, 30, 0.9);
+    color: var(--text-primary-dark);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .dark-mode-toggle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .toggle-icon {
+    font-size: 18px;
+  }
+  
+  .toggle-text {
+    font-size: 14px;
+    font-weight: 500;
+  }

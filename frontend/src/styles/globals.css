@@ -1,0 +1,135 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary: #6C63FF;
+  --secondary: #4D44DB;
+  --light: #F8F9FA;
+  --dark: #343A40;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+@media (max-width: 768px) {
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .dashboard-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+:root {
+  /* Colores base */
+  --white: #ffffff;
+  --black: #121212;
+  
+  /* Light Mode Colors */
+  --primary: #6C63FF;
+  --secondary: #4D44DB;
+  --bg-primary: #f5f7fa;
+  --bg-secondary: #c3cfe2;
+  --text-primary: #343A40;
+  --card-bg: var(--white);
+  
+  /* Dark Mode Colors */
+  --primary-dark: #8A2BE2;
+  --secondary-dark: #5F0F8B;
+  --bg-primary-dark: #0F2027;
+  --bg-secondary-dark: #2C5364;
+  --text-primary-dark: #F8F9FA;
+  --card-bg-dark: #1A1A2E;
+}
+
+/* Estilos base del body */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background-color 0.5s ease, color 0.3s ease;
+}
+
+/* Light Mode */
+body.light-mode {
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  color: var(--text-primary);
+  
+  /* Animación para light mode */
+  &::before {
+    content: '';
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+      radial-gradient(circle at 70% 30%, rgba(108, 99, 255, 0.1) 0%, transparent 30%),
+      radial-gradient(circle at 30% 70%, rgba(160, 231, 229, 0.1) 0%, transparent 30%);
+    animation: gradientMove 15s infinite alternate;
+    z-index: -1;
+  }
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: linear-gradient(135deg, var(--bg-primary-dark) 0%, var(--bg-secondary-dark) 100%);
+  color: var(--text-primary-dark);
+  
+  /* Animación para dark mode */
+  &::before {
+    content: '';
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+      radial-gradient(circle at 70% 30%, rgba(138, 43, 226, 0.1) 0%, transparent 30%),
+      radial-gradient(circle at 30% 70%, rgba(41, 128, 185, 0.1) 0%, transparent 30%);
+    animation: gradientMove 15s infinite alternate;
+    z-index: -1;
+  }
+}
+
+/* Animación del gradiente */
+@keyframes gradientMove {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Componentes que usan las variables */
+.card {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+}
+
+body.dark-mode .card {
+  background-color: var(--card-bg-dark);
+  color: var(--text-primary-dark);
+}
